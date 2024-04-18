@@ -1,0 +1,36 @@
+
+<button class="btn btn-secondary" (click)="navigateBack()"><mat-icon>home</mat-icon>Back</button>
+<div class="main" *ngIf="movieData">
+  <div class="upper">
+    <h2>{{ movieData.title}}</h2>
+    <div class="inner">
+      <img src={{movieData.poster}}>
+      <div class="inner-summary">
+       <p><span>Summary :</span>{{movieData.summary}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="lower">
+    <h2>Details</h2>
+    <div class="row" >
+      <div class="col-4">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-dark">Box Office</li>
+          <li class="list-group-item list-group-item-dark">Budget</li>
+          <li class="list-group-item list-group-item-dark">Duration</li>
+          <li class="list-group-item list-group-item-dark">Producers</li>
+          <li class="list-group-item list-group-item-dark">Cinematographer</li>
+        </ul>
+      </div>
+      <div class="col-8">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-dark">{{movieData.box_office}}</li>
+          <li class="list-group-item list-group-item-dark">{{movieData.budget}}</li>
+          <li class="list-group-item list-group-item-dark">{{movieData.duration}}</li>
+          <li class="list-group-item list-group-item-dark">{{movieData.producers.join(", ")}}</li>
+          <li class="list-group-item list-group-item-dark">{{movieData.cinematographers.join(", ")}}</li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div>

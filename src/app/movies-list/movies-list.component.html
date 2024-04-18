@@ -1,0 +1,37 @@
+<div class="main">
+
+    <div class="filterSection">
+        <h3>Filters: </h3>
+        <div class="form-group">
+            <div class="input-group mb-3 mx-3">
+                <label class="custom-control-label">Title</label>
+                <input type="text" class="form-control" [(ngModel)]="filterName" (keyup)="onChange($event)">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="custom-control-label">Release Year</label>
+                <input type="number" class="form-control" [(ngModel)]="filterYear" pattern="[0-9]{4}"
+                    (keyup)="onChange($event)">
+            </div>
+        </div>
+    </div>
+    <div class="listingSection">
+        <ul *ngFor="let data of filteredData">
+            <li>
+                <div class="main">
+                    <div class="title">
+                        <span>{{ data.title }} </span>
+                    </div>
+                    <div class="details">
+                        <span>Release Date :{{ data.release_date | date :'shortDate'}} </span>
+                        <span>Budget :{{ data.budget}} </span>
+                        <span>Duration :{{ data.duration}} </span>
+                    </div>
+                </div>
+                <div class="main-details">
+                    <button class="btn btn-secondary" (click)="selectedMovie(data.id)">Details</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

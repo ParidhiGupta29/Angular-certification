@@ -1,0 +1,55 @@
+.form-group {
+    display: flex;
+}
+
+.main {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(239, 236, 236);
+    overflow: hidden;
+}
+
+.filterSection {
+    margin: 2% 12% 0% 20%;
+    padding: 0% 2% 0% 2%;
+    height: 100px;
+    width: 50%;
+    background-color: rgb(216, 216, 216);
+    border-radius: 5px;
+
+    label {
+        align-content: center;
+        margin-right: 10px;
+    }
+
+    input {
+        border-radius: 10px !important;
+    }
+}
+
+.listingSection {
+    margin: 2% 5% 0% 17%;
+    padding: 0% 2% 0% 2%;
+    width: 54%;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.details {
+    font-size: 13px;
+    justify-items: center;
+}
+
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: circle;
+}
+
+.btn-secondary {
+    background-color: #9b9ea1;
+    border-color: #9b9ea1;
+}
