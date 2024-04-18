@@ -11,7 +11,7 @@
             <div class="input-group mb-3">
                 <label class="custom-control-label">Release Year</label>
                 <input type="number" class="form-control" [(ngModel)]="filterYear" pattern="[0-9]{4}"
-                    (keyup)="onChange($event)">
+                    (keyup)="onChange($event)" min="0">
             </div>
         </div>
     </div>
