@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { http,HttpResponse } from 'msw';
-import { movieDetail, Movies } from './model/dataTypes';
+import { movieDetail, Movies } from '../model/dataTypes';
 import { Observable } from 'rxjs/internal/Observable';
 import { tap } from 'rxjs';
 

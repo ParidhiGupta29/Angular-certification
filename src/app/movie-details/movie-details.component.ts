@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MovieService } from '../movie.service';
+import { MovieService } from '../services/movie.service';
 import { CommonModule } from '@angular/common';
 import { movieDetail } from '../model/dataTypes';
 

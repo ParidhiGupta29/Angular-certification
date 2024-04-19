@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { Movies } from '../model/dataTypes';
 import { Router } from '@angular/router';
-import { MovieService } from '../movie.service';
+import { MovieService } from '../services/movie.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
@@ -38,6 +38,7 @@ export class MoviesListComponent {
          (movie) => {
         this.movieData = movie ;
         this.filteredData = this.movieData;
+        this.formatData(this.movieData);
     } , error =>{console.error('Error')      
     });   
   }
@@ -52,6 +53,13 @@ export class MoviesListComponent {
   selectedMovie(id:string){
     this.router.navigate([`/list/${id}`]);
     console.log(id);
+  }
+
+  formatData(data){
+    data.forEach(element => {
+      element.budget = '$'+ element.budget + ' miilion';
+      element.duration = Math.floor(element.duration /60)+ "h "+ element.duration%60+"mins";
+    });
   }
 
 }
